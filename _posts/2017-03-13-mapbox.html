@@ -3,35 +3,60 @@ layout: post
 title: Creating 3D Maps with Lidar and Mapbox
 use-site-title: true
 ---
-<iframe id='demo' class='row10 col12' allowfullscreen='true' mozallowfullscreen='true' webkitallowfullscreen='true'></iframe>
-<script>
-    if (mapboxgl.supported()) {
-        var doc = $('#demo')[0].contentWindow.document;
+<iframe id='demo' class='row10 col12' allowfullscreen='true' mozallowfullscreen='true' webkitallowfullscreen='true'>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset='utf-8' />
+        <title></title>
+        <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.33.1/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.33.1/mapbox-gl.css' rel='stylesheet' />
+        <style>
+            body { margin:0; padding:0; }
+            #map { position:absolute; top:0; bottom:0; width:100%; }
+        </style>
+    </head>
+    <body>
 
-        var jsURL = 'https://api.tiles.mapbox.com/mapbox-gl-js/v0.33.1/mapbox-gl.js',
-            cssURL = 'https://api.tiles.mapbox.com/mapbox-gl-js/v0.33.1/mapbox-gl.css';
+    <div id='map'></div>
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiamZoYXdraW4iLCJhIjoiY2l6eGNpOWdjMDF5NjJ3a2V5ZjlxdDMyNCJ9.H4r1UAqhZDQb2g3g36Nsfw';
+    var map = new mapboxgl.Map({
+        style: 'mapbox://styles/mapbox/light-v9',
+        center: [-74.0066, 40.7135],
+        zoom: 15,
+        pitch: 45,
+        bearing: -17.6,
+        container: 'map'
+    });
 
-        var exampleCSS = 'body { margin:0; padding:0; }\n#map { position:absolute; top:0; bottom:0; width:100%; }';
+    // the 'building' layer in the mapbox-streets vector source contains building-height
+    // data from OpenStreetMap.
+    map.on('load', function() {
+        map.addLayer({
+            'id': '3d-buildings',
+            'source': 'composite',
+            'source-layer': 'building',
+            'filter': ['==', 'extrude', 'true'],
+            'type': 'fill-extrusion',
+            'minzoom': 15,
+            'paint': {
+                'fill-extrusion-color': '#aaa',
+                'fill-extrusion-height': {
+                    'type': 'identity',
+                    'property': 'height'
+                },
+                'fill-extrusion-base': {
+                    'type': 'identity',
+                    'property': 'min_height'
+                },
+                'fill-extrusion-opacity': .6
+            }
+        });
+    });
+    </script>
 
-        var examplePREFIX =
-            "<html><head><meta charset=utf-8 /><title></title>\n" +
-            "<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />\n" +
-            "<script src='" + jsURL + "'><\/script>\n" +
-            "<link href='" + cssURL + "' rel='stylesheet' />\n" +
-            "<style>" + exampleCSS + "</style>\n" +
-            "<script>" +
-                "mapboxgl.accessToken = '" + App.accessToken + "';" +
-            "<\/script>\n" +
-            "</head>\n<body>\n";
-
-        var exampleCONTENT = "<div id='map'><\/div>\n<script>\nvar map = new mapboxgl.Map({\n    style: 'mapbox://styles/mapbox/light-v9',\n    center: [-74.0066, 40.7135],\n    zoom: 15,\n    pitch: 45,\n    bearing: -17.6,\n    container: 'map'\n});\n\n// the 'building' layer in the mapbox-streets vector source contains building-height\n// data from OpenStreetMap.\nmap.on('load', function() {\n    map.addLayer({\n        'id': '3d-buildings',\n        'source': 'composite',\n        'source-layer': 'building',\n        'filter': ['==', 'extrude', 'true'],\n        'type': 'fill-extrusion',\n        'minzoom': 15,\n        'paint': {\n            'fill-extrusion-color': '#aaa',\n            'fill-extrusion-height': {\n                'type': 'identity',\n                'property': 'height'\n            },\n            'fill-extrusion-base': {\n                'type': 'identity',\n                'property': 'min_height'\n            },\n            'fill-extrusion-opacity': .6\n        }\n    });\n});\n<\/script>\n";
-        var examplePOSTFIX = "</body>\n</html>";
-
-        doc.open();
-        doc.write(examplePREFIX + exampleCONTENT + examplePOSTFIX);
-        doc.close();
-    } else {
-        $('#unsupported').removeClass('hidden');
-        $('#demo').hide();
-    }
-</script>
+    </body>
+    </html>
+</iframe>
