@@ -280,6 +280,10 @@ footer .theme-by {
   text-align: center;
   margin: 10px 0 0;
 }
+footer .image-by {
+  text-align: center;
+  margin: 10px 0 0;
+}
 
 @media only screen and (min-width: 768px) {
   footer {
