@@ -1,16 +1,11 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: The Essentials
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+**Work** Research Assistant in Department of Civil Engineering at University of Calgary
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+**Education** MSc in Transportation Engineering from University of Calgary in 2016 from Dr. John Douglas Hunt. BSc in Civil Engineering with Interdisciplinary Energy & Environment from University of Calgary in 2014.
 
-What else do you need?
-
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+**Hobbies** Riding trains and exploring new cities, data analysis in Python and Matlab, and reading (economics, urban planning, and history)
