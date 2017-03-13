@@ -8,7 +8,7 @@ use-site-title: true
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoiamZoYXdraW4iLCJhIjoiY2l6eGNpOWdjMDF5NjJ3a2V5ZjlxdDMyNCJ9.H4r1UAqhZDQb2g3g36Nsfw';
 var map = new mapboxgl.Map({
-    style: 'mapbox://styles/mapbox/light-v9',
+    style: 'mapbox://styles/jfhawkin/cj00f0uas006f2smjb73lwfgq',
     center: [-74.0066, 40.7135],
     zoom: 15,
     pitch: 45,
@@ -20,9 +20,9 @@ var map = new mapboxgl.Map({
 // data from OpenStreetMap.
 map.on('load', function() {
     map.addLayer({
-        'id': '3d-buildings',
+        'id': 'airdrie3D-7y0y3t',
         'source': 'composite',
-        'source-layer': 'building',
+        'source-layer': 'buildings',
         'filter': ['==', 'extrude', 'true'],
         'type': 'fill-extrusion',
         'minzoom': 15,
@@ -34,7 +34,7 @@ map.on('load', function() {
             },
             'fill-extrusion-base': {
                 'type': 'identity',
-                'property': 'min_height'
+                'property': 'floorele'
             },
             'fill-extrusion-opacity': .6
         }
