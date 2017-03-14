@@ -42,7 +42,9 @@ use-site-title: true
                 "mapboxgl.accessToken = 'pk.eyJ1IjoiamZoYXdraW4iLCJhIjoiY2l6eGNpOWdjMDF5NjJ3a2V5ZjlxdDMyNCJ9.H4r1UAqhZDQb2g3g36Nsfw';" +
             "<\/script>\n" +
             "</head>\n<body>\n"
-        var docCONTENT = "<div id='map'><\/div>\n<script>\nvar map = new 
+        var docCONTENT = "<div id='map'><\/div>\n<script>\nvar map = new mapboxgl.Map({\n    style: 'mapbox://styles/jfhawkin/cj092v2rm001t2sn58fcf1g8z',\n    center: [-113.990953, 51.287514],\n    zoom: 15,\n    pitch: 45,\n    bearing: -17.6,\n    container: 'map'\n});\n\n// the 'building' layer in the mapbox-streets vector source contains building-height\n// data from OpenStreetMap.\nmap.on('load', function() {\n    map.addLayer({\n        'id': '3d-buildings',\n        'source': 'composite',\n        'source-layer': 'AirdrieBuildings-a6qzv2',\n 'type': 'fill-extrusion',\n        'minzoom': 15,\n        'paint': {\n            'fill-extrusion-color': '#d2edae',\n            'fill-extrusion-height': {\n                'type': 'identity',\n                'property': 'height_m'\n            },\n            'fill-extrusion-opacity': .9\n        }\n    });\n});\n<\/script>\n";
+	    
+	    "<div id='map'><\/div>\n<script>\nvar map = new 
 	mapboxgl.Map({\n style: 'mapbox://styles/jfhawkin/cj092v2rm001t2sn58fcf1g8z',\n center: [-113.990953, 
 		      51.287514],\n zoom: 15,\n pitch: 45, \n bearing: -17.6,\n container: 'map'\n});\n
 	map.on('load', function() {\n    map.addLayer({\n 'id': '3d-buildings',\n 'source': 'composite',\n        
