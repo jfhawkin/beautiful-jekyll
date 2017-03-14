@@ -12,23 +12,21 @@ use-site-title: true
 }
 </style>
 <div>
-	<div>
-	    For a project I am conducting at the University of Calgary, I require a value for average square footage of dwellings in Calgary communities.
-	    LIDAR (Light Detection and Ranging) is a remote sensing technique utilizating laser readings to obtain the elevation of surface points.
-	    From this data, I could obtain a representation of building features. The height of a building can be calculated based on an average of the
-	    elevation readings within a building footprint and an average elevation from a buffer around the footprint representing the ground elevation.
-	    A summary of the method is outlined at this <a href"https://gist.github.com/YKCzoli/3605e014b8ed09a571e5"> link</a>. The necessary
-	    data were not available for the City of Calgary and another method was employed for the project. None the less, I wanted to experiment
-	    with the method. Data were available for the nearby City of Airdrie. Mapbox was used to create the visualization, in conjunction with
-	    postGIS and QGIS (open-source is the best).<br>
-	</div>
-
-	<div id='map' class="interact"></div>
+    For a project I am conducting at the University of Calgary, I require a value for average square footage of dwellings in Calgary communities.
+    LIDAR (Light Detection and Ranging) is a remote sensing technique utilizating laser readings to obtain the elevation of surface points.
+    From this data, I could obtain a representation of building features. The height of a building can be calculated based on an average of the
+    elevation readings within a building footprint and an average elevation from a buffer around the footprint representing the ground elevation.
+    A summary of the method is outlined at this <a href"https://gist.github.com/YKCzoli/3605e014b8ed09a571e5"> link</a>. The necessary
+    data were not available for the City of Calgary and another method was employed for the project. None the less, I wanted to experiment
+    with the method. Data were available for the nearby City of Airdrie. Mapbox was used to create the visualization, in conjunction with
+    postGIS and QGIS (open-source is the best).<br>
 </div>
+
+<div id='map' class="interact"></div>
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoiamZoYXdraW4iLCJhIjoiY2l6eGNpOWdjMDF5NjJ3a2V5ZjlxdDMyNCJ9.H4r1UAqhZDQb2g3g36Nsfw';
 var map = new mapboxgl.Map({
-    style: 'mapbox://styles/jfhawkin/cj00f0uas006f2smjb73lwfgq',
+    style: 'mapbox://styles/jfhawkin/cj092v2rm001t2sn58fcf1g8z',
     center: [-113.990953, 51.287514],
     zoom: 15,
     pitch: 45,
@@ -40,21 +38,16 @@ var map = new mapboxgl.Map({
 // data from OpenStreetMap.
 map.on('load', function() {
     map.addLayer({
-        'id': 'streetsBuildings3D',
+        'id': '3d-buildings',
         'source': 'composite',
-        'source-layer': 'airdrie3D-7y0y3t',
-        'filter': ['==', 'extrude', 'true'],
+        'source-layer': 'AirdrieBuildings-a6qzv2',
         'type': 'fill-extrusion',
         'minzoom': 15,
         'paint': {
             'fill-extrusion-color': '#aaa',
             'fill-extrusion-height': {
                 'type': 'identity',
-                'property': 'height'
-            },
-            'fill-extrusion-base': {
-                'type': 'identity',
-                'property': 'floorele'
+                'property': 'height_m'
             },
             'fill-extrusion-opacity': .6
         }
