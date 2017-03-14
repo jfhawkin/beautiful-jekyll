@@ -3,7 +3,24 @@ layout: post
 title: Mapping Building Heights with Lidar and Mapbox
 use-site-title: true
 ---
-<span>
+<style type="text/css">
+.interact{
+	float:left;
+	margin-top:250px;
+	padding:12px;
+	width:300px;
+    height:300px
+}
+.text{
+	float:left;
+	margin-top:250px;
+	padding:12px;
+	margin-bottom:50px;
+	width:35%;
+	font-size:13px;
+}
+</style>
+<div class="text">
     For a project I am conducting at the University of Calgary, I required a value for average square footage of dwellings in Calgary communities.
     LIDAR (Light Detection and Ranging) is a remote sensing technique utilizating laser readings to obtain the elevation of surface points.
     From this data, we can obtain a representation of building features. The height of a building can be calculated based on an average of the
@@ -14,7 +31,7 @@ use-site-title: true
         postGIS and QGIS (open-source is the best).<br>
 </span>
 
-<div id='map' style="height:300px; width=300px;"></div>
+<div id='map' class="interact"></div>
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoiamZoYXdraW4iLCJhIjoiY2l6eGNpOWdjMDF5NjJ3a2V5ZjlxdDMyNCJ9.H4r1UAqhZDQb2g3g36Nsfw';
 var map = new mapboxgl.Map({
