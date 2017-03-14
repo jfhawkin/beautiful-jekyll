@@ -25,7 +25,7 @@ use-site-title: true
 <iframe id='mapframe' class="interact" ></iframe>
 <script>
 	if (mapboxgl.supported()) {
-        var doc = $('#mapframe')[0].contentWindow.document;
+        var doc = document.getElementById("mapframe")[0].contentWindow.document;
 
         var jsURL = 'https://api.tiles.mapbox.com/mapbox-gl-js/v0.33.1/mapbox-gl.js',
             cssURL = 'https://api.tiles.mapbox.com/mapbox-gl-js/v0.33.1/mapbox-gl.css';
