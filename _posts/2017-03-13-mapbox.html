@@ -7,8 +7,8 @@ use-site-title: true
 .interact{
 	float:left;
 	padding:12px;
-	width:300px;
-    height:300px
+	width:500px;
+    height:500px
 }
 </style>
 <div>
@@ -42,7 +42,30 @@ use-site-title: true
                 "mapboxgl.accessToken = 'pk.eyJ1IjoiamZoYXdraW4iLCJhIjoiY2l6eGNpOWdjMDF5NjJ3a2V5ZjlxdDMyNCJ9.H4r1UAqhZDQb2g3g36Nsfw';" +
             "<\/script>\n" +
             "</head>\n<body>\n"
-        var docCONTENT = "<div id='map'><\/div>\n<script>\nvar map = new mapboxgl.Map({\n    style: 'mapbox://styles/jfhawkin/cj092v2rm001t2sn58fcf1g8z',\n    center: [-113.990953, 51.287514],\n    zoom: 15,\n    pitch: 45,\n    bearing: -17.6,\n    container: 'map'\n});\n\n// the 'building' layer in the mapbox-streets vector source contains building-height\n// data from OpenStreetMap.\nmap.on('load', function() {\n    map.addLayer({\n        'id': '3d-buildings',\n        'source': 'composite',\n        'source-layer': 'AirdrieBuildings-a6qzv2',\n 'type': 'fill-extrusion',\n        'minzoom': 15,\n        'paint': {\n            'fill-extrusion-color': '#d2edae',\n            'fill-extrusion-height': {\n                'type': 'identity',\n                'property': 'height_m'\n            },\n            'fill-extrusion-opacity': .9\n        }\n    });\n});\n<\/script>\n";
+        var docCONTENT = `<div id='map'><\/div>\n
+		<script>\nvar map = new mapboxgl.Map({\n style: 'mapbox://styles/jfhawkin/cj092v2rm001t2sn58fcf1g8z',\n    
+		center: [-113.990953, 51.287514],\n    zoom: 15,\n    pitch: 45,\n    bearing: -17.6,\n    
+		container: 'map'\n});\n\n// the 'building' layer in the mapbox-streets vector source contains building-height\n
+		// data from OpenStreetMap.\nmap.on('load', function() {\n    map.addLayer({\n        'id': '3d-buildings',\n        
+		'source': 'composite',\n        'source-layer': 'AirdrieBuildings-a6qzv2',\n 'type': 'fill-extrusion',\n        
+		'minzoom': 15,\n        'paint': {\n            'fill-extrusion-color': '#d2edae',\n            
+		'fill-extrusion-height': {\n                'type': 'identity',\n                'property': 'height_m'\n},\n            
+		'fill-extrusion-opacity': .9\n }\n }); \n
+		// When a click event occurs near a polygon, open a popup at the location of \n
+		// the feature, with description HTML from its properties. \n
+		map.on('click', function (e) { \n
+    		var features = map.queryRenderedFeatures(e.point, { layers: ['states-layer'] }); \n
+    		if (!features.length) { \n        	return; \n    		} \n
+    		var feature = features[0];\n		var popup = new mapboxgl.Popup()\n
+        	.setLngLat(map.unproject(e.point))\n        	.setHTML(feature.properties.name)\n
+        	.addTo(map);\n		});\n
+		// Use the same approach as above to indicate that the symbols are clickable\n
+		// by changing the cursor style to 'pointer'.\n
+		map.on('mousemove', function (e) {\n
+    		var features = map.queryRenderedFeatures(e.point, { layers: ['states-layer'] });\n
+    		map.getCanvas().style.cursor = (features.length) ? 'pointer' : ''; \n
+		\n});\n
+		<\/script>\n`;
         var docPOSTFIX = "</body>\n</html>";
 
         doc.open();
