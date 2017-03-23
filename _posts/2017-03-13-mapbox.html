@@ -58,14 +58,8 @@ use-site-title: true
     		var features = map.queryRenderedFeatures(e.point, { layers: ['3d-buildings'] }); \n
     		if (!features.length) { \n        	return; \n    		} \n
     		var feature = features[0];\n		var popup = new mapboxgl.Popup()\n
-        	.setLngLat(map.unproject(e.point))\n        	.setHTML(feature.properties.height_m)\n
+        	.setLngLat(map.unproject(e.point))\n        	.setHTML("Building Height: "+feature.properties.height_m+"m")\n
         	.addTo(map);\n		});\n
-		// Use the same approach as above to indicate that the symbols are clickable\n
-		// by changing the cursor style to 'pointer'.\n
-		map.on('mousemove', function (e) {\n
-    		var features = map.queryRenderedFeatures(e.point, { layers: ['3d-buildings'] });\n
-    		map.getCanvas().style.cursor = (features.length) ? 'pointer' : ''; \n
-		\n});\n
 		<\/script>\n`;
         var docPOSTFIX = "</body>\n</html>";
 
