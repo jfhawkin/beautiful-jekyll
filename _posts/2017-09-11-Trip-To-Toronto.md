@@ -7,18 +7,18 @@ We just completed an exhausting 1 week tour of the northern states: North Dakota
 aways for both Heather and myself was the various infrastructure we traversed in the course of our travels. I would like to discuss a bit of
 this, with some accomonying amateur photography.
 
-1. <a href="../img/DSC_0891.jpg"></a>
+1. <a href="../img/DSC_0891.JPG"></a>
 This was the best case of a roller joint on a steel frame structure 
 I have ever seen. It bring back mixed feelings about days in 
 Structure Engineering courses during my undergraduage degree.
-2. <a href="../img/DSC_0897.jpg"></a>
+2. <a href="../img/DSC_0897.JPG"></a>
 This was a mediocre brewery, but a great spot in Grand Forks, ND.
 It is situated adjacent to a major rail corridor and take full advantange.
 There are clear views of the trains rolling into town and by the brewery
 thanks to large windows looking out onto the street and alley. It was
 an excellent example of linking the present use of an older structure with
 its surrounding environment and historical industrial roots.
-3. <a href="../img/DSC_0946.jpg"></a>
+3. <a href="../img/DSC_0946.JPG"></a>
 We drove into Duluth, MN with very little knowledge of its layout and no
 plans as to what to visit. This is I35 passing through downtown. We pulled off
 the highway at a downtown exit and planned to walk somewhere for lunch.
@@ -33,7 +33,7 @@ called Canal Park Brewing Company. I noticed a similar patttern of the commercia
 being separated from the tourist-focused lakeshore upon arrival in Toronto. This is a model
 reminiscent of the days of Robert Moses in New York, with his focus on placing large-scale
 transportation facilities along prime waterfront real estate.
-4. <a href="../img/DSC_0950.jpg"></a>
+4. <a href="../img/DSC_0950.JPG"></a>
 We were unable to ride the train, but it gives some incentive to return to the
 Duluth, MN area. It promises excellent views of the Lake Superior shore and ends at
 Two Harbors, MN. It feels like a similar to my profession to miss out on an historical
