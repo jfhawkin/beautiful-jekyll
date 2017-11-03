@@ -3,11 +3,11 @@ layout: page
 title: Thoughts on AV Jobs Following Presentation by Anthony Lacavera
 ---
 
-I was inspired to write another post on AV following an exciting talk by Anthony Lacavera. Anthony is the founder of Wind Mobile, a telecommuncations company that he
+I was inspired to write another post on AV following an exciting talk by Anthony Lacavera. Anthony is the founder of WIND Mobile, a telecommuncations company that he
 developed to compete with the big three providers in Canada (Bell, Telus, and Rogers). It was an excellent presentation and a good opportunity to gain insights
 as to the focus within the ICT industry around AV and AI. Lacavera provided his opinion on the Toronto bid for the Amazon H2 headquarters. It was interesting for me
 to compare his perspective with that of Richard Florida, a prominent urban theorist based at the University of Toronto. Florida has been a major advocate for the
-locating of the Amazong headquarters in Toronto. He believes it would benefit the city by bringing so called "creative class" individuals to the city, who he argues
+locating of the Amazon headquarters in Toronto. He believes it would benefit the city by bringing so called "creative class" individuals to the city, who he argues
 constitute the foundation of a thriving modern city. Lacavera argues that Canada has a history of being the "branch plant" for international corporations based in other
 nations. He believes that Canadian success will come from nurturing domestic technology developers. In his opinion, Amazon would bring jobs to the city, but the profits
 and intellectual property would be transferred to its headquarters in Seattle. He advocates for the development of a domestic industry and uses RIM as an example. RIM
