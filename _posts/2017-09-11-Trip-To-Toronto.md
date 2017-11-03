@@ -35,6 +35,6 @@ transportation facilities along prime waterfront real estate.
 ![Duluth Interstate](../img/DSC_0946.JPG)
 4. We were unable to ride the train, but it gives some incentive to return to the
 Duluth, MN area. It promises excellent views of the Lake Superior shore and ends at
-Two Harbors, MN. It feels like a similar to my profession to miss out on an historical
+Two Harbors, MN. It feels like a disservice to my profession to miss out on an historical
 train ride.
 ![Duluth Train](../img/DSC_0950.JPG)
