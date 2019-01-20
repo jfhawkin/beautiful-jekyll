@@ -73,6 +73,16 @@
             </a>
           </li>
           {% endif %}
+		  {% if site.author.researchgate and site.footer-links-active.researchgate %}
+          <li>
+            <a href="https://www.researchgate.net/profile/{{ site.author.researchgate }}" title="RG">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-researchgate fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
 		  {% if site.author.xing and site.footer-links-active.xing %}
           <li>
             <a href="https://www.xing.com/profile/{{ site.author.xing }}" title="Xing">

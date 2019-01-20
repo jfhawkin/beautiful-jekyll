@@ -45,6 +45,7 @@ author:
   github: jfhawkin
   linkedin: jason-hawkins-68919234/
   stackoverflow: 4046947
+  researchgate: Jason_Hawkins6
 
 # Select which links to show in the footer
 footer-links-active:
@@ -63,6 +64,7 @@ footer-links-active:
   youtube: false
   spotify: false
   telephone: false
+  researchgate: true
 
 # Select which share links to show in posts
 share-links-active:
