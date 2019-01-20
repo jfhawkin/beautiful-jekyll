@@ -1,7 +1,6 @@
 ---
 layout: page
 title: About me
-subtitle: The Essentials
 ---
 
 <p align="center">
@@ -12,7 +11,7 @@ subtitle: The Essentials
 * Research Assistant - University of Toronto (2017-Present)  
 * Research Assistant  - University of Calgary (2016-2017)  
 * Sessional Instructor  - University of Calgary (Winter 2014)  
-* Transportation and Spatial Economics Modeller - HBA Specto Inc. (2014-2016)  
+* Transportation and Spatial Economics Modeler - HBA Specto Inc. (2014-2016)  
 * Engineering Assistant - Saskatchewan Ministry of Highways and Infrastructure (2012-2013)  
 * Research Assistant - TransLink (Summer 2011)  
 
