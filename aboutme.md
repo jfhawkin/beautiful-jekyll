@@ -5,7 +5,7 @@ subtitle: The Essentials
 ---
 
 <p align="center">
-  <img src="../img/headshot.JPG">
+  <img src="../img/headshot.JPG" width=25%>
 </p>
 
 **Work**  
