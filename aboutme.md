@@ -34,6 +34,6 @@ Development and Application to Carbon Pricing and Technology Change in Alberta, 
 * Urban history   
 
 **Hobbies** 
-* Riding trains and exploring new cities
+* Exploring new cities via bike and train
 * Data analysis in Python, GAUSS, and Matlab
 * Reading (science fiction, economics, urban planning, and history)
